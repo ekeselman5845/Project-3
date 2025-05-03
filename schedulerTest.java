@@ -2,6 +2,7 @@
 //
 // CSCI 70300 -- 2025 SP -- Edgar E. Troudt, Ph.D.
 //
+import java.util.Scanner;
 
 public class schedulerTest {
 
@@ -11,6 +12,18 @@ public class schedulerTest {
 	private static Scheduler	    sc;
 
 	public static void main ( String args[] ) {
+		if (args.length < 1) {
+			System.out.println("Usage: java schedulerTest <RR|CWRR|IWRR>");
+			return;
+		}
+
+		SchedulingMode mode;
+		try {
+			mode = SchedulingMode.valueOf(args[0].toUpperCase());
+		} catch (IllegalArgumentException e) {
+			System.out.println("Invalid scheduling mode. Please use: RR, CWRR, or IWRR.");
+			return;
+		}
 		// everyone follows the computer's clock
 		// instantiate the clock.
 		c = new Clock();
@@ -20,7 +33,7 @@ public class schedulerTest {
 
 		// generates the operating system's scheduling algorithm
 		// instantiate the scheduler with a quantum of 5.
-		sc = new Scheduler(c, pr, 5);
+		sc = new Scheduler(c, pr, 5, mode);
 		
 
 		// simulates the user + OS generating needed processes to run
