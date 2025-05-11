@@ -53,3 +53,5 @@ public class Clock extends Thread {
 		}
 	}
 }
+
+// to run jar file: java -jar .\bin\Goal1.jar

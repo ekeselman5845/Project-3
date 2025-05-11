@@ -3,6 +3,22 @@
 // CSCI 70300 -- 2025 SP -- Edgar E. Troudt, Ph.D.
 //
 
+/*
+ Goal 1: This file supports Goal 1 by generating new processes at random intervals and passing them to the scheduler.
+// Completed Fill-ins for Goal 1: 
+   #4: Constructor sets clock, scheduler, and initializes numProc.
+   #5: Random generation logic set to > 0.4 → gives 60% chance.
+   #6: Adds each process to the scheduler via scheduler.enqueue(p).
+ */
+
+// ProcessGenerator.java Supports follwing: 
+//Goal 2 (Round-Robin), Goal 3 (Classic Weighted Round Robin), Goal 4 (Interleaved Weighted Round Robin)
+// This class generates processes with runtime and priority values, then adds them to the Scheduler.
+// - For Goal 2, it generates processes to be used in basic Round-Robin scheduling.
+// - For Goal 3, it assigns priority (1–high, 2–medium, 3–low) for weighted scheduling.
+// - For Goal 4, it continues using priority to support interleaved scheduling logic in the Scheduler.
+//
+
 public class ProcessGenerator extends Thread {
 
 	private int       numProc;

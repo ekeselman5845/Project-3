@@ -2,6 +2,16 @@
 //
 // CSCI 70300 -- 2025 SP -- Edgar E. Troudt, Ph.D.
 //
+// schedulerTest.java supports following: Goal 2 (Round-Robin), Goal 3 (Classic Weighted Round Robin), Goal 4 (Interleaved Weighted Round Robin)
+//
+// - For Goal 2 (Round-Robin), this file is used to test the Round-Robin scheduling 
+//   algorithm by passing the scheduling mode ("RR") via the command line argument.
+// - For Goal 3 (Classic Weighted Round Robin), the program tests the CWRR algorithm 
+//   by passing the mode ("CWRR") and simulates scheduling based on weighted priorities.
+// - For Goal 4 (Interleaved Weighted Round Robin), the program tests the IWRR algorithm 
+//   by passing the mode ("IWRR"), allowing processes to be interleaved based on their priority weights.
+//
+
 import java.util.Scanner;
 
 public class schedulerTest {

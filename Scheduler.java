@@ -3,6 +3,16 @@
 // CSCI 70300 -- 2025 SP -- Edgar E. Troudt, Ph.D.
 //
 
+// Scheduler.java supports following:
+// Goal 2 (Round-Robin), Goal 3 (Classic Weighted Round Robin), Goal 4 (Interleaved Weighted Round Robin)
+// - For Goal 2 (Round-Robin), this class implements basic round-robin scheduling 
+//   with processes managed in queues based on priority (high, medium, low).
+// - For Goal 3 (Classic Weighted Round Robin), the scheduling is modified 
+//   to consider different quanta based on process priorities (weighted RR).
+// - For Goal 4 (Interleaved Weighted Round Robin), the processes are interleaved 
+//   in the scheduling cycle based on their priority weights, allowing for fairer wait times.
+//
+
 import java.util.LinkedList;
 import java.util.Queue;
 
